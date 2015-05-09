@@ -1,6 +1,7 @@
 class nodejs {
     exec { 'add_node_repo':
-        command => '/usr/bin/add-apt-repository ppa:chris-lea/node.js'
+        command => '/usr/bin/add-apt-repository ppa:chris-lea/node.js',
+	require => Package['npm']
     }
 
     exec { 'update_node_repo':
