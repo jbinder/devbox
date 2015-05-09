@@ -36,9 +36,6 @@ Vagrant::configure("2") do |config|
      puppet.manifest_file  = "base.pp"
      puppet.module_path = "modules"
   end
-  
-  config.trigger.after :up do
-    run "vagrant ssh -c \"bash -c '/var/www/startup.sh'\" \&"
-  end
+
 end
 
