@@ -47,8 +47,10 @@ class php {
         require => File['/etc/php5/conf.d/mcrypt.ini'],
     }
 
+    /*
     service { 'apache2':
         ensure => stopped,
         enable => false,
     }
+    */
 }

@@ -16,6 +16,8 @@ Vagrant::configure("2") do |config|
   config.vm.box = "debian8"
   config.vm.hostname = "devbox"
   config.vm.network :forwarded_port, host: 10080, guest: 80
+  config.vm.network :forwarded_port, host: 10081, guest: 81
+  config.vm.network :forwarded_port, host: 10082, guest: 82
   config.vm.network :forwarded_port, host: 18000, guest: 8000
   config.vm.network :forwarded_port, host: 18080, guest: 8080
   config.vm.synced_folder "www", "/var/www", type: "nfs"
@@ -38,4 +40,3 @@ Vagrant::configure("2") do |config|
   end
 
 end
-

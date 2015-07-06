@@ -29,6 +29,11 @@ include apache2
 include sqlite3
 include mongodb
 
+include mysql
+include php
+include composer
+
+
 /*
 
 class { 'php':
@@ -36,13 +41,12 @@ class { 'php':
 }
 
 include avahi-daemon
-include mysql
-include php
+
 include nginx
 include supervisor
 include sphinx
 include redis
-include composer
+
 include beanstalkd
 include ngrok
 */
